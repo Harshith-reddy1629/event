@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "../../components/Sidebar";
 import Header from "../../components/Header";
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import SearchBar from "../../components/SearchBar";
 import "./index.css";
 
+import Cookies from "js-cookie";
+
 function CheckAuth() {
+  const Token = Cookies.get("token");
+
+  if (Token) {
+    return <Navigate to="/" />;
+  }
+
   return (
     <div className="flex ">
       <div className="p-4 flex-[1_1_60%] flex flex-col gap-3  items-center justify-center text-center font-black text-7xl leading-[55px]  bg-btn-theme ">

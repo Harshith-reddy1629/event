@@ -1,16 +1,29 @@
 import { Formik } from "formik";
 import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./index.css";
 import api from "../../context/apiInstance";
 import axios from "axios";
 import Resend from "./components/Resend";
+import Cookies from "js-cookie";
+
 function Login() {
   const [statusCode, setStatusCode] = useState(0);
+
+  const navigate = useNavigate();
 
   const [errorlogs, setErrorlogs] = useState("");
 
   const mailRef = useRef(0);
+
+  const onSuccess = (result) => {
+    Cookies.set("token", result, {
+      expires: 30,
+      path: "/",
+    });
+
+    navigate("/", { replace: true });
+  };
 
   const handleFocuses = (e) => {
     setErrorlogs({ ...errorlogs, [e.target.id]: "" });
@@ -21,6 +34,7 @@ function Login() {
       const response = await api.post("/user/login", values);
       console.log(response);
       console.log(response.data);
+      onSuccess(response.data.token);
     } catch (error) {
       const { status } = error.response;
       console.log(error.response);
