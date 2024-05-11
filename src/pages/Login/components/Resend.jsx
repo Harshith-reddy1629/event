@@ -31,7 +31,7 @@ const MainCode = ({ closeError }, ref) => {
   return (
     <>
       <div
-        className={`p-1.5 relative px-2 bg-slate-100  border-l-4 ${
+        className={`p-1.5 relative px-2 shadow-md bg-slate-100  border-l-4 ${
           status === "Success" ? "border-green-600" : "border-red-500"
         }`}
       >
@@ -56,7 +56,7 @@ const MainCode = ({ closeError }, ref) => {
                   id="resendBtn"
                   type="button"
                   onClick={ResendMail}
-                  className="p-1.5 mt-1 m-0 text-xs text-white px-5 bg-btn-theme font-medium"
+                  className="p-1.5 mt-1 m-0 shadow  text-xs text-white px-5 bg-btn-theme font-medium"
                 >
                   {" "}
                   Resend Mail
@@ -94,7 +94,7 @@ const MainCode = ({ closeError }, ref) => {
             </p>
           </>
         )}
-        <div className="absolute top-0 right-0 translate-x-[30%] -translate-y-[30%] rounded-full bg-slate-600  hover:bg-red-600 transition-all  p-0.5 text-[10px] text-white">
+        <div className="absolute top-0 right-0 translate-x-[30%] -translate-y-[30%] rounded-full bg-slate-600 shadow-md  hover:bg-red-600 transition-all  p-0.5 text-[10px] text-white">
           <CgClose onClick={closeError} />
         </div>
       </div>
