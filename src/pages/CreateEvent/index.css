@@ -1,0 +1,43 @@
+.cd {
+  /* background: radial-gradient(
+    circle,
+    rgba(186, 178, 178, 0.212) 25%,
+    transparent 25%
+  );
+  background-size: 10% 10%;
+  background-repeat: repeat; */
+}
+/* .sd {
+  background: radial-gradient(
+      circle at 10% 90%,
+      rgba(186, 178, 178, 0.212) 15%,
+      transparent 15%
+    ),
+    radial-gradient(
+      circle at 4% 4%,
+      rgba(186, 178, 178, 0.212) 15%,
+      transparent 15%
+    ),
+    radial-gradient(
+      circle at 94% 20%,
+      rgba(186, 178, 178, 0.212) 12%,
+      transparent 12%
+    ),
+    radial-gradient(
+      circle at 35% 42%,
+      rgba(186, 178, 178, 0.212) 15%,
+      transparent 15%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(186, 178, 178, 0.212) 15%,
+      transparent 15%
+    );
+} */
+label {
+  @apply text-sm font-medium mb-0.5;
+}
+
+.input-stl {
+  @apply p-2.5 rounded-sm  outline-none  text-sm border border-[#88888840];
+}

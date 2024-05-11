@@ -1,0 +1,17 @@
+.li-el {
+  @apply p-3.5 px-5;
+}
+.li-el:not(.active-tab):hover {
+  @apply bg-gray-50;
+}
+
+.active-tab {
+  @apply bg-btn-theme text-white relative;
+}
+/* .active-tab::before {
+  content: "";
+  @apply p-[3px] rounded-full bg-white absolute h-[80%] -translate-y-1/2 top-1/2 left-0.5 transition-transform;
+} */
+
+@keyframes before-anim {
+}

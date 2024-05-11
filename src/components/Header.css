@@ -1,0 +1,17 @@
+.header::before {
+  content: "";
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-radius: 100%;
+  transform: translateY(-50%);
+  z-index: -1;
+  @apply shadow-lg;
+  /* border-bottom: 8px solid rgb(73, 72, 72); */
+}
+.header {
+  position: relative;
+}

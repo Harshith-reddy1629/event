@@ -1,0 +1,8 @@
+.hd {
+  background: linear-gradient(to right, #11111190, transparent),
+    url("../../assets/event.jpeg");
+  background-size: 100%;
+  background-position: 50% 20%;
+  /* background-size: contain; */
+  height: 250px;
+}

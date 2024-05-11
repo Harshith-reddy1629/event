@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  min-height: 100dvh;
+  @apply bg-gradient-to-br from-gray-100 to-slate-300;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+textarea::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+textarea::-webkit-scrollbar:hover {
+  height: 3px;
+}
+textarea::-webkit-scrollbar-thumb {
+  border-radius: 99px;
+}

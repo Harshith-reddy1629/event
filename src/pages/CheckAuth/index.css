@@ -1,0 +1,40 @@
+.td {
+  /* background: linear-gradient(var(--a), rgb(255, 255, 255), rgb(255, 255, 255)); */
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: #fff;
+  animation: text-ani 5s linear infinite;
+  /* background-size: 500px 500px; */
+  background-position: 50% 50%;
+  /* -webkit-box-reflect: below 0px
+    linear-gradient(to top, rgba(233, 228, 228, 0.434), #00000001); */
+
+  text-shadow: 0px 6px 8px #0000004e;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+@property --a {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: true;
+}
+
+/* @keyframes text-ani {
+  0 {
+    --a: 0deg;
+  }
+  100% {
+    --a: 360deg;
+  }
+}
+@property --s {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: true;
+} */
+@keyframes text-ani {
+  0 {
+  }
+  100% {
+  }
+}
