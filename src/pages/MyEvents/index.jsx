@@ -7,7 +7,7 @@ import "./index.css";
 
 function MyEvents() {
   return (
-    <div>
+    <div className="p-3">
       {" "}
       <h1 className="text-2xl">My Events</h1>
       <div className="py-3">
@@ -22,7 +22,7 @@ function MyEvents() {
           </label>
         </div>
       </div>
-      <div className="rd flex flex-col text-gray-700 gap-6 justify-center items-center h-[450px]">
+      <div className="rd flex flex-col text-gray-700 gap-6 justify-center  text-center  items-center h-[450px]">
         <BsCalendar2Event size={140} />
         <p>You don't have any events yet. Create your first event</p>
         <Link

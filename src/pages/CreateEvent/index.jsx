@@ -3,11 +3,13 @@ import "./index.css";
 
 function CreateEvent() {
   return (
-    <div className=" flex flex-col gap-3">
-      <h1 className="text-4xl font-medium ">Create New Event</h1>
+    <div className=" flex flex-col gap-3 p-3">
+      <h1 className="text-3xl font-medium ">Create New Event</h1>
       <div className="py-3 flex flex-col gap-4 items-center">
-        <p className="text-xl font-semibold">Event Details</p>
         <form className="w-full rounded-lg  max-w-[570px]  p-5 cd  bg-white  text-gray-600 flex flex-col gap-2">
+          <p className="text-xl text-center font-bold md:font-semibold mb-1">
+            Event Details
+          </p>
           <div className="flex flex-col">
             <label>Title of the Event</label>
             <input className=" input-stl" placeholder="Title of the event" />

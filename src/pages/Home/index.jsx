@@ -32,14 +32,15 @@ function Home() {
 
   return (
     <>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 p-4">
         <div className="p-6 hd flex items-center">
-          <h1 className="text-4xl text-white font-bold ">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl text-white font-bold ">
             Find and Explore <br /> Amazing Events around you
           </h1>{" "}
         </div>
-        <SearchBar /> {!locPermission && !coordinates && <LocationLoader />}
-        <div className="grid gap-5 gap-y-8 py-5 grid-cols-[repeat(auto-fill,minmax(450px,1fr))]">
+        <SearchBar />
+        {/* {!locPermission && !coordinates && <LocationLoader />} */}
+        <div className="grid gap-5 gap-y-8 py-5 md:grid-cols-[repeat(auto-fill,minmax(450px,1fr))]">
           {events.map((each, i) => (
             <EventCard key={each._id + i} item={each} />
           ))}

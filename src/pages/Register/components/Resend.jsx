@@ -4,6 +4,7 @@ import { CgClose } from "react-icons/cg";
 import { GoAlert } from "react-icons/go";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { MdMarkEmailRead } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const MainCode = ({ closeError }, ref) => {
   const [status, setStatus] = useState("initial");
@@ -14,9 +15,7 @@ const MainCode = ({ closeError }, ref) => {
 
   const ResendMail = async () => {
     try {
-      console.log("first");
       if (mailRef) {
-        console.log("first 1");
         const response = await api.post("/user/resend-mail", {
           email: mailRef,
         });
@@ -36,8 +35,8 @@ const MainCode = ({ closeError }, ref) => {
 
   return (
     <>
-      <div className="p-2 bg-green-400 rounded-full  ">
-        <MdMarkEmailRead size={25} className="text-green-950" />
+      <div className="p-2.5 bg-green-300 rounded-full shadow-[0_0_1px_6px_#e9fff2]  ">
+        <MdMarkEmailRead size={28} className="text-green-700" />
       </div>
       <h1 className="font-medium text-btn-theme text-2xl leading-7">
         Your Account was created
@@ -62,6 +61,8 @@ const MainCode = ({ closeError }, ref) => {
         {" "}
         Resend Verification Email
       </button>
+
+      <Link to="/login">Login</Link>
     </>
   );
 };

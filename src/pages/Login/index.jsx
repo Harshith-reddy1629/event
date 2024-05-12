@@ -77,7 +77,7 @@ function Login() {
             onSubmit={handleSubmit}
             className="bg-white rounded-md shadow-md max-w-[400px] w-full flex flex-col gap-2 p-3  "
           >
-            <h2 className="my-3 text-center text-2xl font-medium">LOGIN</h2>
+            <h2 className="my-3 text-center text-2xl font-semibold ">LOGIN</h2>
             {statusCode === 403 && (
               <Resend closeError={closeError} ref={mailRef} />
             )}

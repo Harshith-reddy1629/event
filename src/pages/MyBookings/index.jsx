@@ -5,7 +5,7 @@ import EventSearch from "../../components/EventSearch";
 import { BiSearchAlt } from "react-icons/bi";
 function MyBookings() {
   return (
-    <div>
+    <div className="p-3">
       {" "}
       <h1 className="text-2xl">My Bookings</h1>
       <div className="py-3">
@@ -20,7 +20,7 @@ function MyBookings() {
           </label>
         </div>
       </div>
-      <div className="flex flex-col text-gray-700 gap-6 justify-center items-center h-[450px]">
+      <div className="flex flex-col text-gray-700 gap-6 justify-center text-center items-center h-[450px]">
         <BsCalendar2Event size={140} />
         <p>You don't have any bookings yet. book your first event</p>
         <Link

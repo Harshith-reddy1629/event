@@ -10,6 +10,7 @@ import CreateEvent from "./pages/CreateEvent";
 import CheckAuth from "./pages/CheckAuth";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Verification from "./pages/Verification.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,6 +27,7 @@ function App() {
         <Route path="/my-events" element={<MyEvents />} />
         <Route path="/create-event" element={<CreateEvent />} />
       </Route>
+      <Route path="/verification/:id" element={<Verification />} />
     </Routes>
   );
 }
