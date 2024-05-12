@@ -6,7 +6,7 @@ import api from "../../context/apiInstance";
 import axios from "axios";
 import Resend from "./components/Resend";
 import Cookies from "js-cookie";
-
+import { BiLoaderAlt } from "react-icons/bi";
 function Login() {
   const [statusCode, setStatusCode] = useState(0);
 
@@ -114,9 +114,14 @@ function Login() {
               id="submit-btn"
               name="submit-btn"
               type="submit"
-              className="p-2 mt-3 bg-btn-theme text-white font-medium"
+              disabled={isSubmitting}
+              className={`p-2 mt-3 bg-btn-theme disabled:bg-btn-theme-800 text-white text-center font-medium`}
             >
-              Login
+              {isSubmitting ? (
+                <BiLoaderAlt className="mx-auto text-xl animate-spin" />
+              ) : (
+                "Login"
+              )}
             </button>
             <p className="text-xs text-blue-700 hover:underline">
               Forgot Password

@@ -28,7 +28,7 @@ function CheckAuth() {
         <div className="font-extrabold text-gray-500 tracking-wider absolute top-3 left-3 bg-gray-300 p-1 px-2 text-xl">
           LOGO
         </div>
-        <div className="relative grid grid-cols-2 w-full max-w-[400px] text-center mt-24 bg-white p-1.5 rounded-full  shadow-[0_0_4px_0px_inset_#00000010,_3px_3px_5px_#00000023,_3px_3px_5px_#ffffff90]">
+        <div className="relative grid grid-cols-2 w-full max-w-[400px] text-center mt-20 bg-white p-1.5 rounded-full  shadow-[0_0_4px_0px_inset_#00000010,_3px_3px_5px_#00000023,_3px_3px_5px_#ffffff90]">
           <Link
             to="/login"
             className={`p-1.5 rounded-full ${

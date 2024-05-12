@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import api from "../../context/apiInstance";
 import { MdMarkEmailRead } from "react-icons/md";
 import Resend from "./components/Resend";
+import { BiLoaderAlt } from "react-icons/bi";
 function Register() {
   const [errorlogs, setErrorlogs] = useState("");
 
@@ -15,7 +16,7 @@ function Register() {
     setErrorlogs({ ...errorlogs, [e.target.id]: "" });
   };
 
-  const submitForm = async (values) => {
+  const submitForm = async (values, setSubmitting) => {
     try {
       const response = await api.post("/user/register-user", values);
       setReg(true);
@@ -23,6 +24,7 @@ function Register() {
       const { status } = error.response;
 
       setErrorlogs(error.response.data);
+      setSubmitting(false);
     }
   };
 
@@ -63,8 +65,8 @@ function Register() {
           return errors;
         }}
         // onSubmit={(values) => SubmitForm(values)}
-        onSubmit={(values) => {
-          submitForm(values);
+        onSubmit={(values, { setSubmitting }) => {
+          submitForm(values, setSubmitting);
         }}
       >
         {({
@@ -152,9 +154,14 @@ function Register() {
               id="register"
               name="register"
               type="submit"
-              className="p-2 mt-3 bg-btn-theme text-white font-medium"
+              disabled={isSubmitting}
+              className="p-2 mt-3 bg-btn-theme disabled:bg-btn-theme-700  text-white font-medium"
             >
-              Register
+              {isSubmitting ? (
+                <BiLoaderAlt className="mx-auto text-xl animate-spin" />
+              ) : (
+                "Register"
+              )}
             </button>
             <p className="text-xs text-center">
               Already have an Account?{" "}
