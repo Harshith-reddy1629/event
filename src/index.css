@@ -39,3 +39,7 @@ textarea::-webkit-scrollbar:hover {
 textarea::-webkit-scrollbar-thumb {
   border-radius: 99px;
 }
+
+.popup-content {
+  @apply max-w-[380px] w-full rounded-md;
+}

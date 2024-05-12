@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import { LuMenu } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
+import Logout from "./Logout";
 function Sidebar() {
   const { pathname } = useLocation();
   const [sideStat, setSideStat] = useState(false);
@@ -63,12 +64,7 @@ function Sidebar() {
           </Link>
         </ul>
         <div className="absolute bottom-2 left-0 p-3 text-center w-full border-t border-[#ccc] flex justify-center">
-          <button
-            onClick={onLogout}
-            className="flex items-center gap-2 hover:text-btn-theme "
-          >
-            <BiLogOut /> Logout
-          </button>
+          <Logout />
         </div>
       </aside>
     </>
