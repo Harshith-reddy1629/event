@@ -10,7 +10,7 @@ import CreateEvent from "./pages/CreateEvent";
 import CheckAuth from "./pages/CheckAuth";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Verification from "./pages/Verification.jsx";
+import Verification from "./pages/Verification/index.jsx";
 import NotFound from "./pages/NotFound/index.jsx";
 
 function App() {

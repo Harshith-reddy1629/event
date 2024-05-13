@@ -26,7 +26,7 @@ function Verification() {
   };
 
   return (
-    <div className="h-[100dvh] w-full flex items-center justify-center p-4 ">
+    <div className="h-[100dvh] w-full flex items-center justify-center p-4 flex-col gap-2 ">
       <div className="flex relative overflow-hidden flex-col justify-center items-center gap-1 p-3 py-5 bg-white rounded text-center max-w-[300px] w-full shadow-md ">
         {
           <>
@@ -86,7 +86,16 @@ function Verification() {
             </button>
           </div>
         )}
-      </div>
+      </div>{" "}
+      {status === "failed" && (
+        <Link
+          to="/"
+          className="bg-slate-600 p-1.5  text-xs text-white rounded-full shadow-lg px-5"
+        >
+          {" "}
+          Return to Login{" "}
+        </Link>
+      )}
     </div>
   );
 }

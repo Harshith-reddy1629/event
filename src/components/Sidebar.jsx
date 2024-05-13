@@ -28,7 +28,7 @@ function Sidebar() {
           LOGO{" "}
           <button
             onClick={() => setSideStat(!sideStat)}
-            className="p-2 bg-slate-200 absolute left-[104%] top-2 rounded-md md:hidden"
+            className="p-2 bg-slate-200 hover:bg-slate-300 absolute left-[104%] top-2 rounded-md md:hidden"
           >
             {sideStat ? <RxCross2 /> : <LuMenu size={18} />}
           </button>

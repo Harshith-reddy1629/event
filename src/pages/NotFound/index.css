@@ -1,3 +1,9 @@
 .ts {
-  text-shadow: -3px 0px #fff;
+  /* text-shadow: -3px 0px #fff; */
+
+  background: linear-gradient(135deg, rgb(77, 110, 142), rgb(69, 166, 168));
+  width: fit-content;
+  margin: auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
