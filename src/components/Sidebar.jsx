@@ -46,7 +46,7 @@ function Sidebar() {
             className={`li-el ${pathname === "/create-event" && "active-tab"}`}
             onClick={() => setSideStat(!sideStat)}
           >
-            + Create Event
+            Create Event
           </Link>
           <Link
             to="/my-events"

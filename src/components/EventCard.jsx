@@ -23,11 +23,13 @@ const months = [
 function EventCard({ item }) {
   const d = new Date(item.date).toString();
 
-  console.log(d);
-  console.log(d);
-
   return (
-    <div className="flex gap-2 relative">
+    <div
+      onMouseMove={(e) => {
+        console.log(e);
+      }}
+      className="flex gap-2 relative"
+    >
       {/* <div className=""> */}
       <img
         src={thumbnail}

@@ -1,0 +1,28 @@
+[
+  {
+    "boundingbox": ["18.7095713", "18.7495713", "79.9652985", "80.0052985"],
+    "class": "place",
+    "display_name": "Mahadevpur, Mahadevpur mandal, Jayashankar Bhupalapally District, Telangana, 505504, India",
+    "importance": 0.47501,
+    "lat": "18.7295713",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "lon": "79.9852985",
+    "osm_id": 2949501527,
+    "osm_type": "node",
+    "place_id": 220257949,
+    "type": "village"
+  },
+  {
+    "boundingbox": ["16.3797489", "16.4197489", "78.552706", "78.592706"],
+    "class": "place",
+    "display_name": "Mahadevpur, Balmoor mandal, Nagarkurnool District, Telangana, India",
+    "importance": 0.47501,
+    "lat": "16.3997489",
+    "licence": "Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+    "lon": "78.572706",
+    "osm_id": 4567255501,
+    "osm_type": "node",
+    "place_id": 220653406,
+    "type": "village"
+  }
+]
