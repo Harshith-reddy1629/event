@@ -43,3 +43,10 @@ textarea::-webkit-scrollbar-thumb {
 .popup-content {
   @apply max-w-[380px] w-full rounded-md;
 }
+
+
+@property --d{
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}

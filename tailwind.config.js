@@ -3,6 +3,30 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "grad-hov":
+          // " repeating-conic-gradient(from var(--d), #fff 0%,#fff 25%,transparent 25%,transparent 50% )",
+          "linear-gradient(var(--d), red 50%, transparent 50% )",
+      },
+      animation: {
+        anim: "anim .65s forwards",
+        anim1: "anim1 .65s forwards",
+      },
+      keyframes: {
+        anim: {
+          to: {
+            "--d": "180deg",
+          },
+        },
+        anim1: {
+          from: {
+            "--d": "180deg",
+          },
+          to: {
+            "--d": "0deg",
+          },
+        },
+      },
       colors: {
         "custom-theme": {
           DEFAULT: "#356c6c",

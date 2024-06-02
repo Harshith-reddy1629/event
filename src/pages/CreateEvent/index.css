@@ -41,3 +41,6 @@ label {
 .input-stl {
   @apply p-2.5 rounded-sm  outline-none  text-sm border border-[#88888840];
 }
+
+input[type="file"] {
+}
