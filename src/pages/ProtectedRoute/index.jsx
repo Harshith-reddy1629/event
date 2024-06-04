@@ -24,7 +24,6 @@ function ProtectedRoute() {
             long: e.coords.longitude ?? 80.03,
           })
         );
-        console.log(e);
       },
       (e) => {
         alert("please Give Location Permission");
@@ -33,7 +32,6 @@ function ProtectedRoute() {
   }, []);
 
   const Token = Cookies.get("token");
-  console.log("mm", selector);
   if (Token) {
     return (
       <div className="flex ">

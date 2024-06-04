@@ -21,10 +21,8 @@ function MyBookings() {
       const response = await api.get("/events/get-events-booked");
       setStatus("success");
       setEvents(response.data);
-      console.log(response.data);
     } catch (error) {
       setStatus("error");
-      console.log("err", error.message);
     }
   };
 

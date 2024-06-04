@@ -50,7 +50,6 @@ function EventCard({ item }) {
           ...response,
           eventID: item._id,
         };
-        console.log(response);
         const res = await fetch(
           `https://event-be.vercel.app/events/order/verify/validate`,
           {
@@ -64,7 +63,6 @@ function EventCard({ item }) {
           }
         );
         const o = await res.json();
-        console.log(o);
       },
       prefill: {
         name: order.notes[0],

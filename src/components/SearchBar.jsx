@@ -34,17 +34,14 @@ function SearchBar() {
         const response = await axios.get(
           `https://geocode.maps.co/search?q=${value.trim()}&api_key=663521e5dcd7e551552660zue4b616b`
         );
-        console.log(response.data);
         if (response.data.length === 0) {
           setError("No locations found with this value");
         }
         setLocs(response.data);
       } else {
-        console.log(" kkk");
         setError("Search with at least 4 Characters");
       }
     } catch (error) {
-      console.log(error.message);
       setError("Something went wrong");
     }
   };

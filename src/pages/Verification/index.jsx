@@ -19,7 +19,6 @@ function Verification() {
       const response = await api.get(`/user/verify/${id}`);
       setStatus("Success");
     } catch (error) {
-      console.log(error);
       setStatus("failed");
       setErr(error?.response?.data?.error);
     }

@@ -32,12 +32,9 @@ function Login() {
   const submitForm = async (values) => {
     try {
       const response = await api.post("/user/login", values);
-      console.log(response);
-      console.log(response.data);
       onSuccess(response.data.token);
     } catch (error) {
       const { status } = error.response;
-      console.log(error.response);
       if (status === 403) {
         setStatusCode(403);
       }

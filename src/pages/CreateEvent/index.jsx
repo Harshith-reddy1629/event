@@ -57,7 +57,6 @@ function CreateEvent() {
         const response = await axios.get(
           `https://geocode.maps.co/search?q=${value.trim()}&api_key=663521e5dcd7e551552660zue4b616b`
         );
-        console.log(response.data);
         if (response.data.length === 0) {
           setErrorlogs((state) => ({
             ...state,
@@ -107,7 +106,6 @@ function CreateEvent() {
         ...prev,
         image: error.message,
       }));
-      console.log(error);
     }
   };
 
@@ -129,16 +127,13 @@ function CreateEvent() {
           location: locationDetails,
           image,
         });
-        console.log(response);
         toast.success("Created");
         // resetForm();
       } catch (error) {
-        console.log(error);
+        toast.error("Failed");
       }
       setSubmitting(false);
     }
-
-    // console.log({ ...values, location: locationDetails });
   };
 
   return (
@@ -409,13 +404,11 @@ function CreateEvent() {
                             className="p-1 py-2 leading-4 hover:bg-slate-100"
                             key={i}
                             onClick={() => {
-                              console.log(e.display_name);
                               setLocationDetails((prevState) => ({
                                 ...prevState,
                                 loc: e.display_name,
                                 coords: [e.lon, e.lat],
                               }));
-                              console.log("location", locationDetails);
                             }}
                           >
                             {e.display_name}

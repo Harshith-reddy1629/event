@@ -26,7 +26,6 @@ const MainCode = ({ closeError }, ref) => {
         setErrors({ error: "Please Enter Email" });
       }
     } catch (error) {
-      console.log(error);
       const { data } = error.response;
       setStatus("error");
       setErrors(data);
