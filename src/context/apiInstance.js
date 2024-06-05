@@ -8,6 +8,7 @@ const api = axios.create({
   baseURL: "https://event-be.vercel.app",
 
   headers: {
+    "Content-Type": "application/json",
     authorization: `Bearer ${token}`,
   },
 });
@@ -24,6 +25,7 @@ api.interceptors.response.use(
       console.log("invalid user");
       window.location.replace("/login");
     }
+    return Promise.reject(error);
   }
 );
 
