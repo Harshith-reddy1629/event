@@ -13,20 +13,20 @@ const api = axios.create({
   },
 });
 
-api.interceptors.response.use(
-  function (response) {
-    console.log("Request Successful");
+// api.interceptors.response.use(
+//   function (response) {
+//     console.log("Request Successful");
 
-    return response;
-  },
-  function (error) {
-    if (error.response.status === 401) {
-      Cookies.remove("token");
-      console.log("invalid user");
-      window.location.replace("/login");
-    }
-    return Promise.reject(error);
-  }
-);
+//     return response;
+//   },
+//   function (error) {
+//     if (error.response.status === 401) {
+//       Cookies.remove("token");
+//       console.log("invalid user");
+//       window.location.replace("/login");
+//     }
+//     return Promise.reject(error);
+//   }
+// );
 
 export default api;
