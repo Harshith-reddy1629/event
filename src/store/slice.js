@@ -1,20 +1,28 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import api from "../context/apiInstance";
-
+import Cookies from "js-cookie";
 const initialState = {
   data: [],
   status: "initial",
   error: "",
 };
 // "Content-Type": "application/json"
+
+// const token = ;
+
 export const fetchEvents = createAsyncThunk(
   "events/fetchEvents",
   async (payload, thunkApi) => {
     try {
       const { lat, long } = payload;
       const response = await api.get(
-        `/events/search-by-cords?lat=${lat}&long=${long}`
+        `/events/search-by-cords?lat=${lat}&long=${long}`,
+        {
+          headers: {
+            authorization: `Bearer ${Cookies.get("token")}`,
+          },
+        }
       );
 
       return response.data;

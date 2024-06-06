@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchEvents } from "../../store/slice";
 
 function ProtectedRoute() {
-  const selector = useSelector((store) => store.events);
+  // const selector = useSelector((store) => store.events);
   const dispatch = useDispatch();
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -26,7 +26,14 @@ function ProtectedRoute() {
         );
       },
       (e) => {
-        alert("please Give Location Permission");
+        alert("Please Give Location Permission");
+
+        dispatch(
+          fetchEvents({
+            lat: 18.66,
+            long: 80.03,
+          })
+        );
       }
     );
   }, []);
