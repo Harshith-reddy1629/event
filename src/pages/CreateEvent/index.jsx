@@ -101,6 +101,7 @@ function CreateEvent() {
       setImage(response.data.secure_url);
       setImageStat("success");
     } catch (error) {
+      console.log(error);
       setImageStat("failed");
       setErrorlogs((prev) => ({
         ...prev,
