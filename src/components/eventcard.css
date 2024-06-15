@@ -3,4 +3,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 2;
+  padding: 4px;
+  @apply rounded;
+  background-color: #55555520;
 }

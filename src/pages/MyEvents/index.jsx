@@ -17,7 +17,11 @@ function MyEvents() {
     try {
       setStatus("loading");
 
-      const response = await api.get("/events/get-events-created");
+      const response = await api.get("/events/get-events-created", {
+        headers: {
+          authorization: `Bearer ${Cookies.get("token")}`,
+        },
+      });
       setStatus("success");
       setEvents(response.data);
     } catch (error) {

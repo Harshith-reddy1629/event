@@ -87,12 +87,12 @@ function EventCard({ item }) {
   };
 
   return (
-    <div className="p-1">
+    <div className="p-2.5">
       <div className="flex gap-2 relative ">
         {/* <div className=""> */}
         <img
           src={item.image}
-          className="w-[40%] bg-gray-400  aspect-[2/1.1] overflow-hidden  flex-shrink-0 object-contain"
+          className="w-[40%] bg-gray-400 rounded  aspect-[2/1.1] overflow-hidden  flex-shrink-0 object-contain"
           alt="."
         />
         {/* </div> */}
@@ -102,15 +102,9 @@ function EventCard({ item }) {
               {item.title}
             </h1>
             <div className=" el mt-1   ">
-              <p className="text-xs text-gray-600 ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                eget quam nec est tincidunt dapibus nec ac justo. Sed nec lacus
-                eu libero fermentum tincidunt vel at lacus. Phasellus vitae quam
-                nec nisi gravida fermentum. Integer condimentum leo non finibus
-                commodo. Donec rhoncus nisl vel luctus pretium. Nam eu semper
-                velit. Vivamus vitae felis quis tortor scelerisque vestibulum.
-                Duis id enim ut elit accumsan tincidunt. Morbi pharetra orci sed
-                est posuere, at tristique
+              <p className="text-xs text-gray-600  ">
+                {" "}
+                Description:- {item.description}
               </p>
             </div>
           </div>

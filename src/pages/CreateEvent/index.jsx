@@ -5,7 +5,7 @@ import "./index.css";
 
 import categories from "../../constants/categoryList.json";
 // import locations from "../../constants/location.json";
-
+import Cookies from "js-cookie";
 import { Formik } from "formik";
 import axios from "axios";
 
@@ -123,11 +123,19 @@ function CreateEvent() {
       });
     } else {
       try {
-        const response = await api.post("/events/", {
-          ...values,
-          location: locationDetails,
-          image,
-        });
+        const response = await api.post(
+          "/events/",
+          {
+            ...values,
+            location: locationDetails,
+            image,
+          },
+          {
+            headers: {
+              authorization: `Beare ${Cookies.get("token")}`,
+            },
+          }
+        );
         toast.success("Created");
         // resetForm();
       } catch (error) {

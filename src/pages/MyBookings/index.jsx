@@ -7,6 +7,7 @@ import "./index.css";
 // import { MdOutlineErrorOutline } from "react-icons/md";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 // import axios from "axios";
+import Cookies from "js-cookie";
 import api from "../../context/apiInstance";
 
 function MyBookings() {
@@ -18,7 +19,11 @@ function MyBookings() {
     try {
       setStatus("loading");
 
-      const response = await api.get("/events/get-events-booked");
+      const response = await api.get("/events/get-events-booked", {
+        headers: {
+          authorization: `Bearer ${Cookies.get("token")}`,
+        },
+      });
       setStatus("success");
       setEvents(response.data);
     } catch (error) {
